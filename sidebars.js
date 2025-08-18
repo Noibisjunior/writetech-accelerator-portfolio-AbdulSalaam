@@ -28,24 +28,17 @@ const sidebars = {
   ],  
   toolingSidebar: [
     {
-      type: 'doc',
-      label: 'Introduction',
-      id: 'documentation-tooling/intro',
-    },
-    {
       type: 'category',
-      label: 'mautic',
-       link: {
-        type: 'doc',
-        id: 'documentation-tooling/mautic-overview'
-      },
+      label: 'Hoppscotch Documentation',
        items: [
+        'documentation-tooling/intro',
         'documentation-tooling/getting-started',
         {
           type: 'category',
           label: 'API Reference',
           items: [
-            'documentation-tooling/api-reference/get-user'
+            'documentation-tooling/api-reference/get-collections',
+            'documentation-tooling/api-reference/post-requests'
           ],
     }
   ],

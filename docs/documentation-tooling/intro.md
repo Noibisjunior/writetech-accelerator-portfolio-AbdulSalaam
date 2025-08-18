@@ -1,18 +1,12 @@
-# Documentation Tooling Project (Docusaurus Site)
-This project involved auditing and restructuring documentation for [Platform Name] using Docusaurus.
+# Introduction
 
-## Live Site
-[View Site](#)
+Hoppscotch is an open-source API development ecosystem and alternative to Postman.  
+It helps developers **test, debug, and share APIs** from a simple web-based client.  
 
-## What I Improved
-- [Example improvement 1]
-- [Example improvement 2]
-- [Example improvement 3]
+### Its Key Features includes
+- **REST, GraphQL, WebSocket support**  
+- **Collections** for organizing requests  
+- **Environment variables** for testing different servers  
+- **Collaboration tools** for sharing workspaces  
 
-## Challenges
-- [Challenge 1]
-- [Challenge 2]
-
-## What I Learnt
-- [Key takeaway 1]
-- [Key takeaway 2]
+Hoppscotch is widely used by developers who want a lightweight, fast, and open-source tool for API testing.

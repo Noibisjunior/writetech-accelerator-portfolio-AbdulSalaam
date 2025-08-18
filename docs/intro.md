@@ -1,16 +1,12 @@
 # My WriteTech Accelerator Portfolio
 
-Welcome! This repository contains all my project work and deliverables from the **WriteTech Accelerator Program**.
+Welcome! This portfolio contains all my project work and deliverables from the **WriteTech Accelerator Program**.
 
-Over the course of the bootcamp, I completed technical writing projects across various domains — including API documentation, AI, DevOps, automation, and Web3 — using modern documentation workflows and tools.
+Over the course of the bootcamp, I have completed technical writing projects across various domains — including API documentation, AI, DevOps, automation, and Web3 — using modern documentation workflows and tools.
 
 ##  About Me
 
-_A short 2–3 sentence professional summary. Include your background, writing interests, and what you’re hoping to achieve with technical writing._
-  
-I'm a technical writer with a background in software development and a passion for clear, user-focused documentation. This portfolio highlights the practical skills I’ve built during the WriteTech Accelerator.
-
-## 📁 Project Modules
+I am a passionate technical writer with a knack for transforming complex technical concepts into clear, engaging, and accessible content. My journey into writing began with a fascination for technology and a desire to bridge the gap between developers and users. I believe that good documentation is not just about explaining how something works, but also about telling a compelling story that empowers and educates the reader.
 
 | Module | Final Deliverables | 
 |--------|---------------------|
@@ -24,8 +20,8 @@ I'm a technical writer with a background in software development and a passion f
 
 ## 🔗 Additional Links
 
-- [LinkedIn](https://linkedin.com/in/Abdulsalaamnoibi)
-- [My Personal Blog](https://yourdomain.com)
+- [LinkedIn](https://linkedin.com/in/Abdulsalaam-noibi)
+- [My Personal Blog](https://noibisjunior.github.io/)
 
 Thanks for checking out my work!
 
