@@ -1,19 +1,25 @@
-# API Documentation Project
+# Introduction
 
-This project documents the [API Name] public REST API, including a Getting Started section and selected endpoints.
+The Chimoney API enables developers to build financial applications that send, receive, and manage global payments.  
 
-## Improved Pages
-...
+It supports payment operations, wallet management, and transaction processing across multiple currencies.
 
-## What I Improved
-- [Example improvement 1]
-- [Example improvement 2]
-- [Example improvement 3]
+Users can also use chimoney to redeem airtime, giftcards and also mobile money
 
-## Challenges
-- [Challenge 1]
-- [Challenge 2]
+This project provides structured documentation for developers integrating with Chimoney.  
 
-## What I Learnt
-- [Key takeaway 1]
-- [Key takeaway 2]
+### The Chimoney API offers a wide variety of services:
+
+- Payout Chimoney: Enables companies and developers to send flexible rewards and exchange rewards (Chimoney) using the API for airtime, mobile money, gift cards, and more.
+
+- Payout Mobile Money: MoMo payouts to 10+ countries supported.
+
+- Payout Airtime: Airtime payouts available for 10+ countries.
+Payout Airtime
+
+- Payout Bank: Payouts to banks available in 130+ countries.
+Payout Bank
+
+- Payout GiftCard: Gift card payouts supported for over 20 countries and 200+ gift card options.
+
+- Payout XRPL: XRPL payments is also enabled.

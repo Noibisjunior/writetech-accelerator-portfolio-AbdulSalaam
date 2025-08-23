@@ -1,0 +1,71 @@
+---
+id: redeem-a-chimoney-as-a-gift-card
+title: "Redeem a Chimoney as a gift card"
+description: "Redeems a Chimoney transaction into a gift card."
+sidebar_label: "Redeem a Chimoney as a gift card"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVk2PGjkQ/StWnWakppmQnPq07GS0i7LZGUGQNgIUGXdBO9ttd/zBDEH936OyG2gYJpGSU7gAdlW53qtXZe8gRyuMrJ3UCjIYY45YWcbZbSErrXDLnOHKckEGTCqnGWdruXJMcJOnkIDjawvZrHWFRQIGv3i07k+dbyHbhb/SYA6ZMx4TEFo5VI62eF2XUnCK3f9sKYMdWFFgxemX29YIGejlZxQOEqiNrtE4iZZ2seKy7JhZZ6RaQwIrbSruIGstGjrRK2e2tzrHSw6nFIwm92zQK9E5NKz1ZIJcm5BC7oUb5T+O89eeJNY69f/HbcimkGNc/TjAxQoYXKFBJZBdSWs9jt5eQ9MkHZJnLe5T2N3UDyksmgTwiVd1iR1GwaCQtUTl/mg3U6Grs3gZTCcnQTPgFf+q1TF6BtLaT3wpXg1eQ9PELG2tlY0FHNzc0NdLrBnMsQrLzHoh0NqVj6h+Uj48zyWZ8vKhIyTS5CkN1nHnLdUlHguU9z6XCMwErX8iYC9xcM5VJODNJcwjteGlJMShb34F42mL7JGcK61JoEJr+fpCO1CWTjqiAu6M0Wbc1gxeYAnJCDoRD3g2vPQ4UtPJ2wP6V8/Rv5fWSrVm2jDZOg4fRoya5XcnYqq4d4U28ivmgYJwnis0SaXWodQ1dwVk0I+S6tNo7ZH+IQGLZoOGhusOvKHOLJyrbdbv81qmoh0PqdTPRsdDlCT9aZILzr3NoGe5ypf6qRunv7lJB+mbZ+Em0ZRdGRS6qlDlmLPHQpbIHFon1foamgUlLLyRbhsyHtbyHW6HnuDNFt3tCVUtFqZrdCgAD4uQgKTDC+Q5Eq+KV7T7X2/4MOq9u/v4LM2P2pvjvdWKiF39HQJcp2yiKwyTnNlQPcsEL0vmCmlZPIXN28PnkM7V1CJzBbI9/CW3yKbjf06hp3MVtEKaHB9vvrvnc9VbNN8dqYeLoDtSDouHsXoUr1QrHYhrdXoCfry/KiAB0lEk6XKF30slK16y+xoV+b5Ob5itUbBcC1+hIqCMsxU+HglGlddaKmeZt5gzqQJZtdHUgulc/asd2myueoyI3FJx9jVpbduBtyf/6lDa60BqEnqk4qHV2+rHV0b3fcJt90Vyjmx3HCE/9biJinT45Pp1yWXIKrTTru3cWXsZQALH3l0kUFB7ZzPY7Ug2U1M2DS1/8WioPxYJbLiRfEl1m9FF3OqcWodmXwa3MfHeB8qBzEsfu+NsDlKHR4+hEFi779ouOhPo4X7yARJYtu+0KorQ8Ee68fgjZAAJ6EBkaNawtoOSq7WPAy7GpM83PM+M+Q==
+sidebar_class_name: "post api-method"
+info_path: docs/api-documentation/openapi/chimoney-api-reference
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Redeem a Chimoney as a gift card"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/redeem/gift-card"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Redeems a Chimoney transaction into a gift card.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"type":"string","format":"email"},"countryCode":{"type":"string","description":"ISO 2-letter country code"},"productId":{"type":"string","description":"Gift card product/key"},"chiRef":{"type":"string","description":"Chimoney transaction reference (issueID)"}},"required":["email","countryCode","productId","chiRef"]},"example":{"email":"recipient@example.com","countryCode":"US","productId":"amazon","chiRef":"iss_abc123"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Gift card redemption successful","content":{"application/json":{"schema":{"type":"object","additionalProperties":true},"example":{"status":"success","redemptionRef":"redeem_123","productId":"amazon","countryCode":"US"}}}},"400":{"description":"Invalid request","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string"},"message":{"type":"string"}},"title":"ErrorResponse"},"example":{"status":"error","message":"Invalid valueInUSD"}}}},"401":{"description":"Missing or invalid API key","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string"},"message":{"type":"string"}},"title":"ErrorResponse"},"example":{"status":"error","message":"Unauthorized"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

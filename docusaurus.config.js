@@ -75,6 +75,26 @@ const config = {
     ],
   ],
 
+  
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'api-documentation',
+        docsPluginId: 'classic', // link to your docs instance
+        config: {
+          chimoney: {
+            specPath: 'docs/api-documentation/reference/chimoney-openapi.yaml', // where you put OpenAPI file
+            outputDir: 'docs/api-documentation/openapi',               // generated MDX files
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+        },
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -155,6 +175,7 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+     themes: ['docusaurus-theme-openapi-docs'],
 };
 
 export default config;

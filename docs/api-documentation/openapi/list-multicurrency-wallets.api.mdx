@@ -1,0 +1,63 @@
+---
+id: list-multicurrency-wallets
+title: "list multicurrency wallets"
+description: "Retrieves a list of all multicurrency wallets associated with an account"
+sidebar_label: "list multicurrency wallets"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVd9vIjcQ/leseUqkZSG5pJX2Dd1FLbpeG0FRewJUGe/A+uq19zw2CUX7v1djFgIJ93R96BNmPT+++eab8Q5KJOV1E7SzUMAYg9e4QRJSGE1BuJWQxog6mqBV9B6t2oonaQwGEpLIKS0DluJJh0pIK6RSLtoAGQS5Jihm8MfeGBYZeKTGWUKCYge3gwH/nOefxGWvC0EJAJaColJItIrGbCED5WxAG9hXNo3RSrJv/wtxgB2QqrCWfArbBqEAt/yCigHJstRsKs2jdw36oBlI8BHbDPBZ1o3BFCHIEAkK6BJDBl3BUMx23Xn0AYru+JdcqpvbdwytIwgKmE4+QAZLaaRVCMXNYJDft9kl7xJXd/c/nHs/TMen3j/et4u2bdsM7i6RNrIbaXQpPH6NSOF7OGpOmHlh4mhHwWu7hjaDGonkGi/ctRkEHZhKePDe+XHXdPgGy8hGcBLxWM9Gmogjy1Qeqr95W/0nTaTtWjgvdOc4fByJv/G7xPK/IGJqZQyV8/ofLBMFKV+oXAkFrDHhlKGCAvpnA9rr9NrnCYIMCP0G/V6+0RsooAqhoaLfl43OVaVrZ3GbawfZK3IfvSujSn9YvW+ce5vbHklbLt3zaZz+ZpDf5ndvwk32puLKo3J1jbbk1VFpgyIgBW3X19AuGLCKXodtQjxs9EfcDiMXOlucXk+4ffsOnRodOyHTR8hAc/IKZYlMsJU13/7ZGz6Oeh8fPr+B+dlFL9535RzUJK5+TgGuczFxNQrlShSU2khC8ZIMlSaxzyLmXfI55HM7JRShQnEofykJxXT8y3np+dwm0Wi7cqmITjxnQMa4Qu4xQgbc0z3gy2x/0lbX0ojfGrTs+y4fCGpQidKpWKPlpEKKFT69FIu2bJzm7RsJS6FtAt54x3ORz+2vLiAVc9sTXNSWiTrw09l2W+hAxNWR5utUYAaNo1DLNH9dJ9JLc/GJeV3T7mWi/9O3aq+XgM+h3xipE84k9l03YTO4OGGQJfD8uFWOAtvtdtzeqTdty5+/RvSs40UGG+m1XHJPZ4s2O+iRJc7LqoChUtgwnLT4kn5frSwW/3EB/PTwO7Ttv6EqsRM=
+sidebar_class_name: "get api-method"
+info_path: docs/api-documentation/openapi/chimoney-api-reference
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"list multicurrency wallets"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/multicurrency-wallets/list"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves a list of all multicurrency wallets associated with an account
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Sub-accounts listed successfully","content":{"application/json":{"schema":{"type":"object","additionalProperties":true},"example":{"status":"success","wallets":[{"walletID":"wallet_abc123","currency":"USD","balance":100.5},{"walletID":"wallet_def456","currency":"EUR","balance":75}]}}}},"400":{"description":"Invalid request","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string"},"message":{"type":"string"}},"title":"ErrorResponse"},"example":{"status":"error","message":"Invalid valueInUSD"}}}},"401":{"description":"Missing or invalid API key","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string"},"message":{"type":"string"}},"title":"ErrorResponse"},"example":{"status":"error","message":"Unauthorized"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: send-a-payment-to-email-or-phone
+title: "send a payment to email or phone"
+description: "Sends a Chimoney payout to the specified email or phone number."
+sidebar_label: "send a payment to email or phone"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk1v2zgQ/SvEnBJAlpO0J53W2wZYo9utEdfAFraxoMmxxa5Esvxw4hr674uh5Fp23BZoe9gcHEmc4cy8efPIPUj0wikblNFQwBS19IyzV6WqjcYds3xnYmDBsFAi8xaFWiuUDGuuKmYcs6XRyHSsV+hyyCDwjYdiDpPk6GGZgcNPEX343cgdFPv0qhxKKIKLmIEwOqAOtMStrZTglMzwo6eM9uBFiTWnp7CzCAWY1UcUATKwzlh0QaGnVdGl7Hum3Dm+gwxUwNp/fwsfVyMhTNRh/Lpn7YNTegPZGVYmPfBq/BqaDBIgl5zWxtU8QNFZNBlseRVxrGfTfpAWQWiaJoNa6XGb8S29HgGb96pcUtAnXtsKz8qf7w/ZgEOhrEIdfutMc2FqOE3h9qZZNk0byFujfQvG3c0N/Tut+ZwXwtCmASXzUQj0fh2rihD/4aZyKVWL66TXG2LKab0+8BA9Ad0GTjEjRbzNQPLAEw7K+4jUTHr6h6/E7d0LyH4QnpeXEBnrLa+UZB3Jf6b0MzJ2BZ4ziviB3vMNXlhrMggqEEJw75xxD11H4SvgIRlBb8cv9fQgOFR/+7z6t8p7pTckBKpzHE3G7F/8KQ78L4CYaR5DaZz6jDJBkOKF0kgowJrUastDCQUM22nww8MQQgYe3RZdO43REdnKEKwvhkNuVX4wzJV5pisTZ2QU6aXJLjgPtncDz7Vcmaf+PsPtTX6Xv3y23bQ1ZVcOhalr1BIleyxVhSygD0pvrqFZUsIiOhV2KeORVW9wN4pU3nzZX55S19rG9I2Okps+kuZS8BK5RMJV85pW/x6MJuPBm/sPz9L8YKI7HjsdidjVH2mD65xNTY1MGInMp+55JnhVsVAqz9oobNEFX0C+0DOP6cg6lL/iHtns4c/T0vOFTlwhTj4cj6n7r+nq6QlxFPmDoESP7htaQlJCyKxNQqwj6EnVD7hGh1oguaLzLTqXW/tWaVXzir2zqMn3RX6TjmgmjYg1aqqQcbbGxyOyqKU1SgfPokfJlE4oWWdo9vKF/ssE9MVCDxghuKOuHJrR2XZKd0D96ktPrxOaWRqOmqcZ79ruUUvG6dCgrOg2cXp/OK9sf9SOX3ElaZkZ8CkMbcVVSjKN1b6b4Dl0E0yqdZjhZQYljXkxh/2e6DNzVdPQ508RHc3JkrrrFF9RG+fU2o7vRBXSwAJetXUM3lMOHRnSlJzpIU166zESAm34pu2yp0STd9P3kMGqu1zVRpKP44+Qpd8CIOuuKmlo07c9VFxvYit07Z709x+CRHvE
+sidebar_class_name: "post api-method"
+info_path: docs/api-documentation/openapi/chimoney-api-reference
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"send a payment to email or phone"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/payouts/chimoney"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends a Chimoney payout to the specified email or phone number.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"chimoneys":{"type":"array","items":{"type":"object","properties":{"subAccountID":{"type":"string","description":"optionalID"},"email":{"type":"string","format":"email"},"valueInUSD":{"type":"number"}}},"minItems":1}},"required":["chimoneys"]},"example":{"chimoneys":[{"email":"recipient@example.com","valueInUSD":10}]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Chimoney payout completed successfully","content":{"application/json":{"schema":{"type":"object","additionalProperties":true},"example":{"status":"success","count":1,"data":[{"issueID":"iss_abc123","email":"recipient@example.com","valueInUSD":10}]}}}},"400":{"description":"Invalid request","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string"},"message":{"type":"string"}},"title":"ErrorResponse"},"example":{"status":"error","message":"Invalid valueInUSD"}}}},"401":{"description":"Missing or invalid API key","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string"},"message":{"type":"string"}},"title":"ErrorResponse"},"example":{"status":"error","message":"Unauthorized"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
