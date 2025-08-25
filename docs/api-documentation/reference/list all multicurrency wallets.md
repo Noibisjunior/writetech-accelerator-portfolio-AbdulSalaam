@@ -19,6 +19,7 @@ GET https://api-v2-sandbox.chimoney.io/v0.2.4/multicurrency-wallets/list
 ---
 
 ## Response
+---
 
 **200 Success**
 ```json

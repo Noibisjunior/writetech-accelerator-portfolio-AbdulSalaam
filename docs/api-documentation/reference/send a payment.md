@@ -39,7 +39,8 @@ POST https://api-v2-sandbox.chimoney.io/v0.2.4/payouts/chimoney
 }
 ```
 
-## Response
+## 
+---
 
 **200 Success**
 ```json

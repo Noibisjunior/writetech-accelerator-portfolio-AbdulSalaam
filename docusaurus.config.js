@@ -52,6 +52,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/Noibisjunior/writetech-accelerator-portfolio-AbdulSalaam',
+            docItemComponent: "@theme/ApiItem"
         },
         blog: {
           showReadingTime: true,
