@@ -55,6 +55,11 @@ const sidebars = {
     items: [
         'api-documentation/intro',
         'api-documentation/Getting Started with the Chimoney API',
+         {
+          type: 'link',
+          label: 'Interactive API Explorer',
+          href: '/api-explorer',
+        },
     {
       type: 'category',
       label: 'API Reference',

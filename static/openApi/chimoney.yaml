@@ -1,0 +1,166 @@
+openapi: 3.0.3
+info:
+  title: Chimoney API Reference
+  version: "0.2.4"
+  description: |
+    Minimal OpenAPI 3.0 spec documenting a few Chimoney endpoints used in the project.
+    Notes:
+    - Use your API key in the request header (X-API-KEY).
+servers:
+  - url: https://api.chimoney.io
+    description: Production
+  - url: https://api-v2-sandbox.chimoney.io/v0.2.4
+    description: Sandbox (recommended while testing)
+security:
+  - ApiKeyAuth: []
+
+paths:
+  /payouts/chimoney:
+    post:
+      summary: send a payment to email or phone
+      description: Sends a Chimoney payout to the specified email or phone number.
+      tags: [Payouts]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                chimoneys:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subAccountID: { type: string , description: optionalID}
+                      email: { type: string, format: email }
+                      valueInUSD: { type: number }
+                  minItems: 1
+              required: [chimoneys]
+            example:
+              chimoneys:
+                - email: recipient@example.com
+                  valueInUSD: 10
+      responses:
+        "200":
+          description: Chimoney payout completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+              example:
+                status: "success"
+                count: 1
+                data:
+                  - issueID: "iss_abc123"
+                    email: "recipient@example.com"
+                    valueInUSD: 10
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+
+  /redeem/gift-card:
+    post:
+      summary: Redeem a Chimoney as a gift card
+      description: Redeems a Chimoney transaction into a gift card.
+      tags: [Redeem]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email: { type: string, format: email }
+                countryCode: { type: string, description: "ISO 2-letter country code" }
+                productId: { type: string, description: "Gift card product/key" }
+                chiRef: { type: string, description: "Chimoney transaction reference (issueID)" }
+              required: [email, countryCode, productId, chiRef]
+            example:
+              email: recipient@example.com
+              countryCode: US
+              productId: amazon
+              chiRef: iss_abc123
+      responses:
+        "200":
+          description: Gift card redemption successful
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+              example:
+                status: "success"
+                redemptionRef: "redeem_123"
+                productId: "amazon"
+                countryCode: "US"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+
+  /multicurrency-wallets/list:
+    get:
+      summary: list multicurrency wallets
+      description: Retrieves a list of all multicurrency wallets associated with an account
+      tags: [Wallets]
+
+      responses:
+        "200":
+          description: Sub-accounts listed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+              example:
+                status: "success"
+                wallets:
+                  - walletID: "wallet_abc123"
+                    currency: "USD"
+                    balance: 100.50
+                  - walletID: "wallet_def456"
+                    currency: "EUR"
+                    balance: 75.00
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+      description: |
+        Your Chimoney API key (Header). Some code samples call this header "apiKey".
+        Use the Sandbox base URL while testing.
+  responses:
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+          example:
+            status: "error"
+            message: "Invalid valueInUSD"
+    Unauthorized:
+      description: Missing or invalid API key
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+          example:
+            status: "error"
+            message: "Unauthorized"
+
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        status: { type: string }
+        message: { type: string }
