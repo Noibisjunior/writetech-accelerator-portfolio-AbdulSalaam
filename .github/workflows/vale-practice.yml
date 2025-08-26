@@ -1,0 +1,27 @@
+name: Vale Practice
+
+on:
+  workflow_dispatch: # manually trigger from Actions tab
+
+jobs:
+  print-info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Print GitHub username and Repo details
+        run: |
+          echo "GitHub Username: ${{ github.actor }}"
+          echo "Repository: ${{ github.repository }}"
+
+      - name: Install Vale
+        run: |
+          curl -sL https://github.com/errata-ai/vale/releases/latest/download/vale_Linux_64-bit.tar.gz -o vale.tar.gz
+          tar -xzf vale.tar.gz
+          sudo mv vale /usr/local/bin/
+          vale --version
+
+      - name: Confirm Vale installation
+        run: echo "Vale was installed on my machine."

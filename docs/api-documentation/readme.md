@@ -1,26 +1,34 @@
+# API Documentation Projects
+
+This project documents the **Chimoney REST API**, built using a **Docs-as-Code** approach with Docusaurus.  
+The documentation includes an overview, a beginner-friendly setup guide, and selected API endpoint references.
+
+## Live Site
+[View Documentation](https://writetech-accelerator-portfolio-abd.vercel.app/)
+
+## Improvements Made
+- Wrote a clear and structured **Getting Started** guide for beginners  
+- Standardized endpoint docs with **headers, parameters, responses, and errors**  
+- Added practical **curl examples** for quick testing and reproducibility  
+
+## Challenges Faced
+- Integrating the **OpenAPI plugin** with Docusaurus  
+- Understanding and documenting **authentication flows**  
+- Debugging a **`npm run build` issue** caused by plugin incompatibility  
+  - Solved by adding:  
+    ```js
+    docItemComponent: "@theme/ApiItem"
+    ```
+    to the `classic` config in `docusaurus.config.js`
+
+## Key Learnings
+- Best practices for structuring API docs using a **Docs-as-Code workflow**  
+- Importance of documenting **error responses** alongside successful ones  
+- How OpenAPI specs can generate **interactive, standardized API docs**  
+- Practical debugging experience when working with doc toolchains  
 
 ---
 
-### `README.md`
-```markdown
-# API Documentation Project
-
-This project documents the **Chimoney REST API**, including a Getting Started guide and selected endpoints.
-
-## Live Site
-https://writetech-accelerator-portfolio-abd.vercel.app/
-
-## What I Improved
-- Created a clear, beginner-friendly **Getting Started** guide  
-- Standardized endpoint docs with headers, parameters, responses, and errors  
-- Added examples with `curl` requests for easy testing  
-
-## Challenges
-- Using the openApi plugin was a challenge  
-- Understanding authentication took extra time 
-- I had problem fixing the npm run build due to the incompatibility of the openApi plugin
-
-## What I Learnt
-- How to structure API docs using **Docs-as-Code** best practices  
-- Importance of including error responses and sample requests  
-- How OpenAPI specs can help generate interactive docs  
+### My Reflection
+This project gave me hands-on experience applying **Docs-as-Code principles** to a real API.  
+I learned how proper documentation design not only helps users get started faster but also reduces support overhead for developers.  
