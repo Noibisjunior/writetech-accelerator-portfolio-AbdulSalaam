@@ -1,4 +1,4 @@
-name: Vale Practice
+name: Vale Practice2
 
 on:
   workflow_dispatch: # allows you to trigger it manually from GitHub
