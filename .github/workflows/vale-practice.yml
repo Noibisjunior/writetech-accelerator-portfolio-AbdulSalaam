@@ -1,7 +1,7 @@
 name: Vale Practice
 
 on:
-  workflow_dispatch: # lets you run it manually from the Actions tab
+  workflow_dispatch: # allows you to trigger it manually from GitHub
 
 jobs:
   print-info:
@@ -15,13 +15,6 @@ jobs:
         run: |
           echo "GitHub Username: ${{ github.actor }}"
           echo "Repository: ${{ github.repository }}"
-
-      - name: Install Vale
-        run: |
-          curl -sL https://github.com/errata-ai/vale/releases/download/v3.12.0/vale_3.12.0_Linux_64-bit.tar.gz -o vale.zip
-          unzip vale.zip -d vale-bin
-          sudo mv vale-bin/vale /usr/local/bin/
-          vale --version
 
       - name: Confirm Vale installation
         run: echo "Vale was installed on my machine."
