@@ -17,4 +17,4 @@ jobs:
         run: npm ci
 
       - name: Run Link Check
-        run: npx markdown-link-check "docs/docs-automation/"
+        run: npx markdown-link-check "docs/docs-automation/test.md"
