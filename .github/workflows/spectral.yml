@@ -63,7 +63,7 @@ jobs:
       - name: Build API Reference docs
         run: |
           mkdir -p docs
-          redocly build-docs api/openapi.yaml -o docs/api-reference.html
+          redocly build-docs docs/docs-automation/openapi.yaml -o docs/api-reference.html
 
       - name: Create Custom Home Page
         run: |
