@@ -1,8 +1,8 @@
 # API Documentation Automation
 
-This folder contains the configuration and workflow setup for **automated validation and documentation** of our OpenAPI specifications.
+This folder contains the configuration and workflow setup for **automated validation and documentation** of the OpenAPI specifications.
 
-## 📌 What We Set Up
+## My setup includes:
 
 - **GitHub Actions Workflow** that:
   - Validates OpenAPI 3.0 specifications with [Spectral](https://meta.stoplight.io/docs/spectral).
@@ -10,14 +10,14 @@ This folder contains the configuration and workflow setup for **automated valida
   - Deploys the generated documentation to **GitHub Pages** on every commit to the `main` branch.
 
 - **Documentation Hosting**:  
-  The generated docs are published automatically and can be accessed via GitHub Pages (see repository settings for the live URL).
+  The generated docs are published automatically and can be accessed via [GitHub Pages](https://noibisjunior.github.io/writetech-accelerator-portfolio-AbdulSalaam/.)
 
 - **Custom Landing Page**:  
   An `index.html` file was generated automatically in the workflow. It links to the API reference docs and the GitHub repository, and it was customized to use **Chimoney** as a case study.
 
 ---
 
-## ✅ Rules and Standards Enforced
+## Rules and Standards Enforced
 
 - **Spectral Linting**:
   - Ensures OpenAPI 3.0 specifications follow best practices.
@@ -28,24 +28,21 @@ This folder contains the configuration and workflow setup for **automated valida
     - Schema objects must have `type` defined.
     - Responses must include at least one `2xx` success code.
 
-- **Vale (for prose linting)** *(if enabled alongside Spectral)*:
+- **for Vale linting**:
   - Enforces consistent style and grammar in API descriptions and documentation.
   - Example standards:
     - Avoids weak words like “just” or “simple”.
     - Enforces sentence case for headings.
     - Consistent spelling (e.g., “email” not “e-mail”).
+---
 
-Together, Spectral + Vale help ensure **technical accuracy** (OpenAPI) and **clarity** (docs prose).
+## Screenshots 
+
+[Workflow Logs](../../static/img/workflow.jpg)
 
 ---
 
-## 📸 Screenshots (Optional)
-
-*(Add screenshots of GitHub Actions workflow logs here if available)*
-
----
-
-## ⚡ Challenges Faced
+## My Challenges 
 
 - **GitHub Pages Setup**:  
   Initially, the workflow failed with:
@@ -53,33 +50,17 @@ Together, Spectral + Vale help ensure **technical accuracy** (OpenAPI) and **cla
 
 This was fixed by enabling **GitHub Pages → Source → GitHub Actions** in the repository settings.
 
-- **Linting Errors**:  
-Spectral flagged missing descriptions and response codes in the spec, requiring multiple iterations to fix.
-
-- **Workflow Permissions**:  
-Required `permissions: contents: write, pages: write, id-token: write` to allow deployment.
-
 ---
 
-## 📚 What We Learned
+## What I have Learnt so far
 
 1. **CI/CD for Documentation**:  
- How to automate validation and deployment of API docs with GitHub Actions.
+ I learnt how to automate validation and deployment of API docs with GitHub Actions.
 
 2. **Importance of Standards**:  
  Spectral enforces OpenAPI quality, while Vale ensures docs readability and consistency.
 
 3. **Troubleshooting Deployments**:  
- Learned how to debug GitHub Actions errors related to permissions and Pages setup.
-
-4. **Separation of Concerns**:  
- Splitting workflows into `validate-openapi` and `generate-docs` jobs makes the process clearer and maintainable.
+ I also learnt how to debug GitHub Actions errors related to permissions and Pages setup.
 
 ---
-
-### 🚀 Next Steps
-
-- Expand Spectral rules to enforce security best practices (e.g., all operations must define security schemes).  
-- Add automated **preview deployments for PRs** so reviewers can click and view live docs before merging.  
-- Improve branding of the docs site with Chimoney’s theme.
-
