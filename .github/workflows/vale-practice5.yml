@@ -17,4 +17,5 @@ jobs:
           echo "Repository: ${{ github.repository }}"
 
       - name: Confirm Vale installation
-        run: echo "Vale was installed on my machine."
+        uses: errata-ai/vale-action@v2.1.1
+     

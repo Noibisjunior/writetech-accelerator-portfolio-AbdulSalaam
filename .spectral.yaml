@@ -1,0 +1,308 @@
+# Spectral configuration file for OpenAPI validation
+# This file configures Spectral linter for OpenAPI specification validation
+
+extends:
+  - spectral:oas
+  - spectral:asyncapi
+
+
+rules:
+  paths-kebab-case:
+    description: Paths should be kebab-case.
+    message: "{{property}} should be kebab-case (lower-case and separated with hyphens)"
+    severity: warn
+    given: $.paths[*]~
+    then:
+      function: pattern
+      functionOptions:
+        match: "^(\/|[a-z0-9-.]+|{[a-zA-Z0-9_]+})+$"
+
+# rules:
+#   # OpenAPI specific rules
+#   oas3-api-servers: error
+#   oas3-operation-security-defined: error
+#   oas3-valid-media-example: error
+#   oas3-valid-schema-example: error
+#   oas3-valid-oas-content-example: error
+#   oas3-valid-content-example: error
+#   oas3-valid-example: error
+#   oas3-valid-parameter-example: error
+#   oas3-valid-header-example: error
+#   oas3-valid-link-example: error
+#   oas3-valid-callback-example: error
+#   oas3-valid-encoding-example: error
+#   oas3-valid-media-example: error
+#   oas3-valid-schema-example: error
+#   oas3-valid-oas-content-example: error
+#   oas3-valid-content-example: error
+#   oas3-valid-example: error
+#   oas3-valid-parameter-example: error
+#   oas3-valid-header-example: error
+#   oas3-valid-link-example: error
+#   oas3-valid-callback-example: error
+#   oas3-valid-encoding-example: error
+
+#   # Security rules
+#   oas3-security-strict: error
+#   oas3-security-defined: error
+#   oas3-valid-security-scheme: error
+#   oas3-valid-security-requirement: error
+
+#   # Schema validation rules
+#   oas3-valid-schema: error
+#   oas3-valid-schema-example: error
+#   oas3-valid-schema-example-value: error
+#   oas3-valid-schema-example-value-against-schema: error
+
+#   # Parameter validation rules
+#   oas3-valid-parameter: error
+#   oas3-valid-parameter-example: error
+#   oas3-valid-parameter-example-value: error
+#   oas3-valid-parameter-example-value-against-schema: error
+
+#   # Response validation rules
+#   oas3-valid-response: error
+#   oas3-valid-response-example: error
+#   oas3-valid-response-example-value: error
+#   oas3-valid-response-example-value-against-schema: error
+
+#   # Request body validation rules
+#   oas3-valid-request-body: error
+#   oas3-valid-request-body-example: error
+#   oas3-valid-request-body-example-value: error
+#   oas3-valid-request-body-example-value-against-schema: error
+
+#   # Header validation rules
+#   oas3-valid-header: error
+#   oas3-valid-header-example: error
+#   oas3-valid-header-example-value: error
+#   oas3-valid-header-example-value-against-schema: error
+
+#   # Link validation rules
+#   oas3-valid-link: error
+#   oas3-valid-link-example: error
+#   oas3-valid-link-example-value: error
+#   oas3-valid-link-example-value-against-schema: error
+
+#   # Callback validation rules
+#   oas3-valid-callback: error
+#   oas3-valid-callback-example: error
+#   oas3-valid-callback-example-value: error
+#   oas3-valid-callback-example-value-against-schema: error
+
+#   # Encoding validation rules
+#   oas3-valid-encoding: error
+#   oas3-valid-encoding-example: error
+#   oas3-valid-encoding-example-value: error
+#   oas3-valid-encoding-example-value-against-schema: error
+
+#   # Media validation rules
+#   oas3-valid-media: error
+#   oas3-valid-media-example: error
+#   oas3-valid-media-example-value: error
+#   oas3-valid-media-example-value-against-schema: error
+
+#   # Content validation rules
+#   oas3-valid-content: error
+#   oas3-valid-content-example: error
+#   oas3-valid-content-example-value: error
+#   oas3-valid-content-example-value-against-schema: error
+
+#   # Custom rules for API documentation best practices
+#   operation-description: error
+#   operation-summary: error
+#   operation-operationId: error
+#   operation-tags: error
+#   operation-parameters: error
+#   operation-requestBody: error
+#   operation-responses: error
+#   operation-callbacks: error
+#   operation-deprecated: error
+#   operation-externalDocs: error
+#   operation-security: error
+#   operation-servers: error
+
+#   # Schema best practices
+#   schema-description: error
+#   schema-title: error
+#   schema-default: error
+#   schema-example: error
+#   schema-examples: error
+#   schema-externalDocs: error
+#   schema-deprecated: error
+#   schema-discriminator: error
+#   schema-xml: error
+
+#   # Parameter best practices
+#   parameter-description: error
+#   parameter-required: error
+#   parameter-deprecated: error
+#   parameter-allowEmptyValue: error
+#   parameter-style: error
+#   parameter-explode: error
+#   parameter-allowReserved: error
+#   parameter-schema: error
+#   parameter-example: error
+#   parameter-examples: error
+#   parameter-content: error
+
+#   # Response best practices
+#   response-description: error
+#   response-headers: error
+#   response-content: error
+#   response-links: error
+
+#   # Request body best practices
+#   requestBody-description: error
+#   requestBody-required: error
+#   requestBody-content: error
+
+#   # Header best practices
+#   header-description: error
+#   header-required: error
+#   header-deprecated: error
+#   header-allowEmptyValue: error
+#   header-style: error
+#   header-explode: error
+#   header-allowReserved: error
+#   header-schema: error
+#   header-example: error
+#   header-examples: error
+#   header-content: error
+
+#   # Link best practices
+#   link-operationRef: error
+#   link-operationId: error
+#   link-parameters: error
+#   link-requestBody: error
+#   link-description: error
+#   link-server: error
+
+#   # Callback best practices
+#   callback-expression: error
+#   callback-url: error
+
+#   # Encoding best practices
+#   encoding-contentType: error
+#   encoding-headers: error
+#   encoding-style: error
+#   encoding-explode: error
+#   encoding-allowReserved: error
+
+#   # Media best practices
+#   media-schema: error
+#   media-example: error
+#   media-examples: error
+#   media-encoding: error
+
+#   # Content best practices
+#   content-schema: error
+#   content-example: error
+#   content-examples: error
+#   content-encoding: error
+
+#   # Security scheme best practices
+#   securityScheme-type: error
+#   securityScheme-description: error
+#   securityScheme-name: error
+#   securityScheme-in: error
+#   securityScheme-scheme: error
+#   securityScheme-bearerFormat: error
+#   securityScheme-flows: error
+#   securityScheme-openIdConnectUrl: error
+
+#   # Server best practices
+#   server-url: error
+#   server-description: error
+#   server-variables: error
+
+#   # Server variable best practices
+#   serverVariable-enum: error
+#   serverVariable-default: error
+#   serverVariable-description: error
+
+#   # Info best practices
+#   info-title: error
+#   info-description: error
+#   info-version: error
+#   info-contact: error
+#   info-license: error
+
+#   # Contact best practices
+#   contact-name: error
+#   contact-url: error
+#   contact-email: error
+
+#   # License best practices
+#   license-name: error
+#   license-url: error
+
+#   # External docs best practices
+#   externalDocs-description: error
+#   externalDocs-url: error
+
+#   # Tag best practices
+#   tag-name: error
+#   tag-description: error
+#   tag-externalDocs: error
+
+#   # Path best practices
+#   path-summary: error
+#   path-description: error
+#   path-get: error
+#   path-put: error
+#   path-post: error
+#   path-delete: error
+#   path-options: error
+#   path-head: error
+#   path-patch: error
+#   path-trace: error
+#   path-servers: error
+#   path-parameters: error
+
+#   # Components best practices
+#   components-schemas: error
+#   components-responses: error
+#   components-parameters: error
+#   components-examples: error
+#   components-requestBodies: error
+#   components-headers: error
+#   components-securitySchemes: error
+#   components-links: error
+#   components-callbacks: error
+
+#   # Custom rules for API consistency
+#   consistent-operation-summary: error
+#   consistent-operation-description: error
+#   consistent-parameter-naming: error
+#   consistent-response-naming: error
+#   consistent-schema-naming: error
+#   consistent-tag-naming: error
+#   consistent-path-naming: error
+
+#   # Custom rules for API security
+#   security-required: error
+#   security-scheme-defined: error
+#   security-scheme-valid: error
+#   security-requirement-valid: error
+
+#   # Custom rules for API documentation
+#   documentation-required: error
+#   documentation-complete: error
+#   documentation-consistent: error
+#   documentation-clear: error
+#   documentation-concise: error
+#   documentation-accurate: error
+#   documentation-up-to-date: error
+
+#   # Disable some overly strict rules
+#   oas3-valid-schema-example: off
+#   oas3-valid-parameter-example: off
+#   oas3-valid-response-example: off
+#   oas3-valid-request-body-example: off
+#   oas3-valid-header-example: off
+#   oas3-valid-link-example: off
+#   oas3-valid-callback-example: off
+#   oas3-valid-encoding-example: off
+#   oas3-valid-media-example: off
+#   oas3-valid-content-example: off 
