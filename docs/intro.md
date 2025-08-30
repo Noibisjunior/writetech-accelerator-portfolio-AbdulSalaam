@@ -6,7 +6,7 @@ Over the course of the bootcamp, I have completed technical writing projects acr
 
 ##  About Me
 
-I am a passionate technical writer with a knack for transforming complex technical concepts into clear, engaging, and accessible content. My journey into writing began with a fascination for technology and a desire to bridge the gap between developers and users. I believe that good documentation is not just about explaining how something works, but also about telling a compelling story that empowers and educates the reader.
+I am a passionate technical writer with a knack for transforming complex technical concepts into clear, engaging, and accessible content. My journey into writing began with a fascination for technology and a desire to bridge the gap between developers and users. I believe that good documentation isn't just about explaining how something works, but also about telling a compelling story that empowers and educates the reader.
 
 | Module | Final Deliverables | 
 |--------|---------------------|
@@ -20,7 +20,7 @@ I am a passionate technical writer with a knack for transforming complex technic
 
 ## 🔗 Additional Links
 
-- [LinkedIn](https://linkedin.com/in/Abdulsalaam-noibi)
+- [LinkedIn](https://www.linkedin.com/in/Abdulsalaam-noibi)
 - [My Personal Blog](https://noibisjunior.github.io/)
 
 Thanks for checking out my work!
