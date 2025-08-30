@@ -1,20 +1,20 @@
-name: Check Markdown links
+name: Broken Link Checker
 
-on: push
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+on:
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build-and-check:
+  broken-link-checker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out repository code
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Check links
+        uses: tcort/github-action-markdown-link-check@v1
         with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run Link Check
-        run: npx markdown-link-check "docs/docs-automation/test.md"
+          folder-path: 'docs/'
+        
