@@ -63,27 +63,106 @@ jobs:
       - name: Build API Reference docs
         run: |
           mkdir -p docs
-          redocly build-docs docs/docs-automation/openapi.yaml -o docs/api-reference.html
+          redocly build-docs api/openapi.yaml -o docs/api-reference.html
 
-      - name: Create landing index.html
+      - name: Create Custom Home Page
         run: |
           cat > docs/index.html << 'EOF'
           <!DOCTYPE html>
           <html lang="en">
           <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>API Documentation</title>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Chimoney API Documentation</title>
+              <style>
+                  body {
+                      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                      max-width: 800px;
+                      margin: 0 auto;
+                      padding: 2rem;
+                      line-height: 1.6;
+                  }
+                  h1 {
+                      color: #333;
+                      border-bottom: 2px solid #007acc;
+                      padding-bottom: 0.5rem;
+                  }
+                  .nav {
+                      background: #f5f5f5;
+                      padding: 1rem;
+                      border-radius: 8px;
+                      margin: 2rem 0;
+                  }
+                  .nav a {
+                      display: inline-block;
+                      margin-right: 1rem;
+                      color: #007acc;
+                      text-decoration: none;
+                      font-weight: 500;
+                  }
+                  .nav a:hover {
+                      text-decoration: underline;
+                  }
+                  .feature {
+                      background: #e8f4fd;
+                      padding: 1rem;
+                      border-radius: 8px;
+                      margin: 1rem 0;
+                      border-left: 4px solid #007acc;
+                  }
+              </style>
           </head>
           <body>
-            <h1>Welcome to the API Docs</h1>
-            <ul>
-              <li><a href="api-reference.html">API Reference</a></li>
-              <li><a href="https://github.com/${{ github.repository }}">GitHub Repo</a></li>
-            </ul>
+              <h1>Chimoney API Documentation</h1>
+              
+              <div class="nav">
+                  <a href="api-reference.html">API Reference</a>
+                  <a href="https://github.com/${{ github.repository }}">GitHub Repository</a>
+              </div>
+              
+              <div class="feature">
+                  <h2>Welcome to the Chimoney API</h2>
+                  <p>The Chimoney API enables seamless money movement worldwide — send, receive, and redeem value across multiple channels including bank transfers, airtime, gift cards, and wallets.</p>
+              </div>
+              
+              <h2>Quick Start</h2>
+              <p>To get started with Chimoney:</p>
+              <ol>
+                  <li>Review the <a href="api-reference.html">API Reference</a> for detailed endpoint documentation</li>
+                  <li>Get your <a href="https://chimoney.io/developers">API Key from Chimoney Dashboard</a></li>
+                  <li>Explore examples and SDKs in the <a href="https://github.com/${{ github.repository }}">GitHub repository</a></li>
+              </ol>
+              
+              <h2>Features</h2>
+              <ul>
+                  <li><strong>Cross-Border Payments:</strong> Move money across countries instantly</li>
+                  <li><strong>Gift Cards & Airtime:</strong> Redeem value in multiple forms</li>
+                  <li><strong>Wallet-to-Wallet:</strong> Secure transfers between Chimoney users</li>
+                  <li><strong>Developer Friendly:</strong> RESTful API design with SDKs</li>
+                  <li><strong>Scalable:</strong> Enterprise-ready infrastructure</li>
+              </ul>
+              
+              <h2>Authentication</h2>
+              <p>All API requests require authentication using your Chimoney API key. Include your key in the Authorization header:</p>
+              <pre><code>Authorization: Bearer YOUR_CHIMONEY_API_KEY</code></pre>
+              
+              <h2>Base URL</h2>
+              <p>All API endpoints are relative to:</p>
+              <pre><code>https://api.chimoney.io/v1</code></pre>
+              
+              <div class="feature">
+                  <h3>Need Help?</h3>
+                  <p>If you need assistance or have questions about the API:</p>
+                  <ul>
+                      <li>Visit the <a href="https://chimoney.io/developers">Chimoney Developer Hub</a></li>
+                      <li>Check the <a href="https://github.com/${{ github.repository }}/issues">GitHub Issues</a></li>
+                      <li>Contact support at <a href="mailto:support@chimoney.io">support@chimoney.io</a></li>
+                  </ul>
+              </div>
           </body>
           </html>
           EOF
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
