@@ -122,6 +122,12 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'aiDocsSidebar',
+            position: 'left',
+            label: 'AI Documentation',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'apiSidebar',
             position: 'left',
             label: 'Api Documentation',
@@ -169,7 +175,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built by Noibisjunior.`,
+        copyright: `Copyright ${new Date().getFullYear()} My Project, Inc. Built by Noibisjunior.`,
       },
       prism: {
         theme: prismThemes.github,
