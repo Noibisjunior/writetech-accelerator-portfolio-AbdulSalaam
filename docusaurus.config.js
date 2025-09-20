@@ -128,6 +128,12 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'devopsCloudSidebar',
+            position: 'left',
+            label: 'DevOps/Cloud',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'apiSidebar',
             position: 'left',
             label: 'Api Documentation',
