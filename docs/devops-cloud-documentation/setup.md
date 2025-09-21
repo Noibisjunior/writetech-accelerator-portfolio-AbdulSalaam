@@ -11,8 +11,8 @@ Before we begin, ensure you have the following:
 
 ## Step 1: Create a New Repository
 
-- **Sign in** to your GitHub account
-- **Create a new repository**:
+- Sign in to your GitHub account
+- Create a new repository:
    - Click the "+" icon in the top-right corner
    - Select "New repository"
    - Name your repository (e.g. "github-actions-demo")
