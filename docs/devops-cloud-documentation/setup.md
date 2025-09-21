@@ -11,8 +11,8 @@ Before we begin, ensure you have the following:
 
 ## Step 1: Create a New Repository
 
-i. **Sign in** to your GitHub account
-ii. **Create a new repository**:
+- **Sign in** to your GitHub account
+- **Create a new repository**:
    - Click the "+" icon in the top-right corner
    - Select "New repository"
    - Name your repository (e.g. "github-actions-demo")
@@ -36,9 +36,9 @@ repository-name/
 
 GitHub Actions is enabled by default for all repositories. To verify:
 
-i. Navigate to your repository on GitHub
-ii. Click on the "Actions" tab
-iii. If prompted, click "Set up a workflow yourself" or "Configure" to get started
+- Navigate to your repository on GitHub
+- Click on the "Actions" tab
+- If prompted, click "Set up a workflow yourself" or "Configure" to get started
 
 ## Step 3: Create Your First Workflow File
 
@@ -70,9 +70,9 @@ iii. Commit and push these changes to your repository
 
 ## Step 4: Verify Your Setup
 
-i. Go to the "Actions" tab in your GitHub repository
-ii. You should see your workflow running (it may take a minute to appear)
-iii. Click on the workflow run to see the details and logs
+- Go to the "Actions" tab in your GitHub repository
+- You should see your workflow running (it may take a minute to appear)
+- Click on the workflow run to see the details and logs
 
 ## Understanding the Workflow File
 

@@ -108,10 +108,10 @@ jobs:
 
 For sensitive data like API keys or deployment tokens:
 
-i. Go to your GitHub repository
-ii. Click on "Settings" > "Secrets and variables" > "Actions"
-iii. Click "New repository secret"
-iv. Add secrets like `DEPLOY_TOKEN`, `AWS_ACCESS_KEY_ID`, etc.
+- Go to your GitHub repository
+- Click on "Settings" > "Secrets and variables" > "Actions"
+- Click "New repository secret"
+- Add secrets like `DEPLOY_TOKEN`, `AWS_ACCESS_KEY_ID`, etc.
 
 Use them in your workflow:
 
