@@ -108,10 +108,10 @@ jobs:
 
 For sensitive data like API keys or deployment tokens:
 
-1. Go to your GitHub repository
-2. Click on "Settings" > "Secrets and variables" > "Actions"
-3. Click "New repository secret"
-4. Add secrets like `DEPLOY_TOKEN`, `AWS_ACCESS_KEY_ID`, etc.
+i. Go to your GitHub repository
+ii. Click on "Settings" > "Secrets and variables" > "Actions"
+iii. Click "New repository secret"
+iv. Add secrets like `DEPLOY_TOKEN`, `AWS_ACCESS_KEY_ID`, etc.
 
 Use them in your workflow:
 
@@ -180,7 +180,7 @@ on:
     - cron: '0 0 * * *'
 ```
 
-## 6. Real-World Example: Deploying to Vercel
+## Step 6. Real-World Example: Deploying to Vercel
 
 Here's how to deploy a Next.js app to Vercel:
 
@@ -198,7 +198,7 @@ Here's how to deploy a Next.js app to Vercel:
   run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --prod
 ```
 
-## 7. Best Practices for writing your workflows
+## Best Practices for writing your workflows
 
 1. **Keep workflows fast**: Optimize build times with caching and parallel jobs
 2. **Use environment-specific configurations**: Separate dev, staging, and production environments
