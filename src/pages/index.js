@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomepageProjects from '@site/src/components/HomepageProjects';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -20,7 +21,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Portfolio Overview
+            View My Work
           </Link>
         </div>
       </div>
@@ -32,11 +33,12 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Welcome to ${siteConfig.title}`}
+      description="Technical writing portfolio showcasing skills in developer documentation, API guides, and more.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <HomepageProjects />
       </main>
     </Layout>
   );

@@ -1,35 +1,36 @@
+import React from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Developer Documentation',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Crafting clear, concise, and comprehensive documentation for APIs,
+        SDKs, and complex software.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'API Reference Guides',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Creating detailed and user-friendly API reference guides that help
+        developers get started quickly.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Tutorials & How-To Guides',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Developing step-by-step tutorials and how-to guides that empower
+        users to succeed with your products.
       </>
     ),
   },
