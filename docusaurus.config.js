@@ -134,6 +134,12 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'web3DocsSidebar',
+            position: 'left',
+            label: 'Web3 Documentation',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'apiSidebar',
             position: 'left',
             label: 'Api Documentation',

@@ -58,7 +58,19 @@ const sidebars = {
     },
   ],
 
-  // 🚀 DevOps/Cloud Docs section (NEW)
+  // Web3 Documentation section
+  web3DocsSidebar: [
+    {
+      type: 'category',
+      label: 'Web3 Documentation',
+      items: [
+        'web3-documentation/README',
+        'web3-documentation/user-guide',
+      ],
+    },
+  ],
+
+  
   devopsCloudSidebar: [
     {
       type: 'category',
