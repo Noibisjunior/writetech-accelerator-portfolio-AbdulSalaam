@@ -52,9 +52,9 @@ Expected: ~$180–200 DAI (based on current rates). use the transaction hash to 
 
 
 ### High-Level Overview
-Uniswap is an automated market maker (AMM) protocol that uses smart contracts to facilitate peer-to-peer token swaps. Unlike centralized exchanges, it relies on liquidity providers (users like you) who add tokens to pools. 
+Uniswap is an automated market maker (AMM) protocol that uses smart contracts to facilitate peer-to-peer token swaps. Unlike centralized exchanges, it relies on liquidity providers, users like you who add tokens to pools. 
 
-When you swap, you are trading against these pools, with prices determined by a mathematical formula (x * y = k). No order books—just direct, permissionless trading. Value flows through fees (0.3% per swap, shared with liquidity providers) and governance tokens (UNI) for community decisions.
+When you swap, you are trading against these pools, with prices determined by a mathematical formula (x * y = k). No order books, just direct, permissionless trading. Value flows through fees (0.3% per swap, shared with liquidity providers) and governance tokens (UNI) for community decisions.
 
 ### Core Concepts
 - **Liquidity Pools**: Reserves of two tokens (e.g., ETH/DAI) that enable swaps. Adding liquidity earns you pool tokens (LP tokens) and a share of fees.
@@ -88,7 +88,7 @@ For developers, here's a key information on Uniswap's contracts. Always verify a
 - **Uniswap V3 Router**: `0xE592427A0AEce92De3Edee1F18E0157C05861564` (Ethereum Mainnet)
 - **Factory**: `0x1F98431c8aD98523631AE4a59f267346ea31F984`
 - **Common Pairs**: ETH/USDC pool at `0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8`
-- **Multi-Chain**: Similar addresses on Polygon, Arbitrum—check per network.
+- **Multi-Chain**: Similar addresses on Polygon, Arbitrum,check per network.
 
 ### Function Reference: All Public Functions with Parameters
 - **Swap Functions** (in Router):
@@ -185,5 +185,5 @@ Hands-on examples for common tasks.
 - **Static Analysis**: For custom integrations, use static analysis tools for security vulnerabilities.
 
 ## Conclusion
-You have gotten a solid foundation for using Uniswap! Start with the QuickStart, experiment safely, and explore advanced features. For more information, visit [Uniswap Docs](https://docs.uniswap.org) or community resources. Remember, DeFi involves risks—only use funds you can afford to lose.
+You have gotten a solid foundation for using Uniswap! Start with the QuickStart, experiment safely, and explore advanced features. For more information, visit [Uniswap Docs](https://docs.uniswap.org) or community resources. Remember, DeFi involves risks, only use funds you can afford to lose.
 
