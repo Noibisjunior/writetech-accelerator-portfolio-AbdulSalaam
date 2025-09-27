@@ -13,9 +13,9 @@ I am a passionate technical writer with a knack for transforming complex technic
 | [Documentation Tooling & Static Site Generators](documentation-tooling/intro.md) | How-to guide for setting up a docs-as-code workflow using Docusaurus |
 | [API Documentation](api-documentation/intro.md) | Improved documentation for selected endpoints from a public API 
 | [Documentation Automation](docs-automation/README.md) | Automated checks (style, links, builds) using tools like Vale, Spectral, and GitHub Actions
-| [AI for Documentation](ai-documentation/final_doc.md) | Comparison of AI tools or prompt-based documentation using your own examples 
-| [DevOps & Cloud Documentation](devops-cloud-documentation/overview.md) | Step-by-step guide for a DevOps/cloud tool or process (e.g., CI/CD, deployment)
-| Technical Writing in Web3 | One of: user guide for a Web3 tool, white paper draft, or improved API doc for a Web3 platform 
+| [AI for Documentation](ai-documentation/final_doc.md) | Documenting the Mistral AI model
+| [DevOps & Cloud Documentation](devops-cloud-documentation/overview.md) | Step-by-step guide for a DevOps/cloud tool or process ( How to set up CI/CD on GitHub Actions)
+| [Technical Writing in Web3](web3-documentation/user-guide.md) | User Guide for a Web3 Tool or dApp, focusing on Uniswap 
 
 
 ## 🔗 Additional Links
