@@ -36,31 +36,106 @@ This folder contains the configuration and workflow setup for **automated valida
     - Consistent spelling (e.g., “email” not “e-mail”).
 ---
 
-## Screenshots 
+## Workflow execution
 
-[Workflow Logs](../../static/img/workflow.jpg)
+Below is a screenshot showing the GitHub Actions workflow in action. The automated pipeline validates the OpenAPI specification, generates documentation, and deploys it to GitHub Pages.
 
----
+![Workflow execution logs](../../static/img/workflow.jpg)
 
-## My Challenges 
-
-- **GitHub Pages Setup**:  
-  Initially, the workflow failed with:
-**Error: Get Pages site failed. Please verify that the repository has Pages enabled...**
-
-This was fixed by enabling **GitHub Pages → Source → GitHub Actions** in the repository settings.
+*The workflow successfully validates the OpenAPI spec with Spectral, builds documentation with Redocly, and deploys to GitHub Pages.*
 
 ---
 
-## What I have Learnt so far
+## Challenges faced and solutions
 
-1. **CI/CD for Documentation**:  
- I learnt how to automate validation and deployment of API docs with GitHub Actions.
+Building an automated documentation pipeline involved overcoming several technical challenges. Here's how I resolved the key issues encountered during implementation.
 
-2. **Importance of Standards**:  
- Spectral enforces OpenAPI quality, while Vale ensures docs readability and consistency.
+### GitHub Pages deployment error
 
-3. **Troubleshooting Deployments**:  
- I also learnt how to debug GitHub Actions errors related to permissions and Pages setup.
+**Problem:** The initial workflow deployment failed with the following error:
+
+```
+Error: Get Pages site failed. Please verify that the repository has Pages enabled and has a valid source configured.
+```
+
+**Root cause:** GitHub Pages was not configured to use GitHub Actions as the deployment source.
+
+**Solution:** 
+1. Navigate to repository **Settings → Pages**.
+2. Under "Build and deployment," change **Source** to **GitHub Actions**.
+3. Re-run the workflow.
+
+This configuration allows [GitHub Actions](https://docs.github.com/en/actions) workflows to deploy directly to Pages without requiring a separate branch.
+
+### Spectral configuration
+
+**Problem:** Understanding which Spectral rules to enable and how to create custom rules for API-specific requirements.
+
+**Solution:** Started with the default `spectral:oas` ruleset and gradually added custom rules. Used the [Spectral documentation](https://meta.stoplight.io/docs/spectral/docs/getting-started/3-rulesets.md) to understand JSONPath selectors and rule functions.
+
+### Vale style guide setup
+
+**Problem:** Configuring Vale to use the correct style guides. The initial `.vale.ini` configuration had an incorrect path: `StylesPath = /.github/styles`.
+
+**Solution:** Fixed the configuration by changing it to `StylesPath = .github/styles` (removing the leading slash). This resolved path resolution errors and allowed Vale to find the style guides correctly.
+
+---
+
+## Key learnings
+
+This project provided hands-on experience with modern documentation automation practices and CI/CD workflows. Here are the key technical skills and insights gained.
+
+### 1. CI/CD for documentation
+
+I learned how to implement continuous integration and deployment pipelines specifically for documentation. [GitHub Actions](https://docs.github.com/en/actions) enables automated validation and deployment on every code change, ensuring documentation is always current and accurate.
+
+**Key insight:** Automating documentation deployment eliminates manual publishing steps and reduces human error. Every commit triggers validation, ensuring broken documentation never reaches production.
+
+### 2. Importance of standards and validation
+
+[Spectral](https://stoplight.io/open-source/spectral) enforces OpenAPI specification quality, while [Vale](https://vale.sh/) ensures documentation readability and consistency. These tools catch issues that human reviewers might miss, such as:
+
+- Missing operation descriptions
+- Inconsistent terminology
+- Grammar and style violations
+- Incomplete API schemas
+
+By automating these checks, documentation quality improves significantly while reducing review time.
+
+### 3. OpenAPI specification best practices
+
+Working with Spectral taught me the importance of well-structured API specifications. Complete, accurate OpenAPI documents enable:
+
+- **Automated documentation generation** - Tools like [Redocly](https://redocly.com/) can build beautiful docs automatically
+- **Code generation** - Client SDKs and server stubs can be generated from the spec
+- **Contract testing** - Automated tests can validate that implementations match the specification
+- **Interactive documentation** - Users can test API endpoints directly from the docs
+
+### 4. Troubleshooting GitHub Actions
+
+I gained practical experience debugging CI/CD workflows, particularly around:
+
+- Permission configuration for GitHub Pages deployment
+- Workflow dependencies and job ordering
+- Artifact management and file path handling
+- Environment variables and secrets management
+
+Understanding GitHub Actions logs and error messages was crucial for identifying and fixing deployment issues quickly.
+
+---
+
+## Conclusion
+
+This module demonstrates how automation transforms documentation from a manual, error-prone process into a reliable, efficient pipeline. By integrating [Spectral](https://stoplight.io/open-source/spectral), [Redocly](https://redocly.com/), [Vale](https://vale.sh/), and [GitHub Actions](https://github.com/features/actions), I created a system that ensures API documentation is always validated, consistently styled, and automatically deployed.
+
+**Benefits of this automation approach:**
+
+- **Quality assurance** - Automated validation catches errors before they reach users
+- **Consistency** - Style guides enforce uniform terminology and formatting
+- **Efficiency** - Automatic deployment eliminates manual publishing steps
+- **Reliability** - Every change is tested and validated before deployment
+- **Scalability** - The same pipeline can validate hundreds of API endpoints
+
+This automation infrastructure reduces documentation maintenance overhead while improving quality, making it an essential practice for modern technical writing teams.
 
 ---

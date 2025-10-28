@@ -1,21 +1,56 @@
-name: Vale Practice2
+name: Vale Documentation Linting
 
 on:
-  workflow_dispatch: # allows you to trigger it manually from GitHub
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
-  print-info:
+  vale:
+    name: Vale Style and Grammar Check
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Print GitHub username and Repo details
-        run: |
-          echo "GitHub Username: ${{ github.actor }}"
-          echo "Repository: ${{ github.repository }}"
-
-      - name: Confirm Vale installation
+      - name: Run Vale linter
         uses: errata-ai/vale-action@v2.1.1
+        with:
+          files: docs/
+          separator: "\n"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Vale results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vale-results
+          path: vale-output.json
+          retention-days: 7
+
+## initial setup
+# name: Vale Practice2
+
+# on:
+#   workflow_dispatch: # allows you to trigger it manually from GitHub
+
+# jobs:
+#   print-info:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repo
+#         uses: actions/checkout@v4
+
+#       - name: Print GitHub username and Repo details
+#         run: |
+#           echo "GitHub Username: ${{ github.actor }}"
+#           echo "Repository: ${{ github.repository }}"
+
+#       - name: Confirm Vale installation
+#         uses: errata-ai/vale-action@v2.1.1
      
