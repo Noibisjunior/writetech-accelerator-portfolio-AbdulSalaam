@@ -19,23 +19,67 @@ GitHub Actions is a powerful automation tool that integrates directly with your 
 
 ## Real-World Applications
 
-GitHub Actions can be used for various purposes:
+[GitHub Actions](https://github.com/features/actions) can automate many development workflows:
 
-1. **Automated Testing**: Run tests on every push or pull request
-2. **Package Publishing**: Automate npm, Docker, or other package publishing
-3. **Deployment**: Deploy to cloud providers like AWS, Azure, or Google Cloud
-4. **Code Quality**: Run linters and code formatters
-5. **Scheduled Tasks**: Run periodic tasks like database backups
+| Use Case | Description | Tools/Platforms |
+|----------|-------------|----------------|
+| **Automated Testing** | Run tests on every push or pull request | [Jest](https://jestjs.io/), [Pytest](https://pytest.org/), [JUnit](https://junit.org/) |
+| **Package Publishing** | Automate package releases | [npm](https://www.npmjs.com/), [Docker Hub](https://hub.docker.com/), [PyPI](https://pypi.org/) |
+| **Cloud Deployment** | Deploy to cloud platforms | [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/), [Google Cloud](https://cloud.google.com/), [Vercel](https://vercel.com/) |
+| **Code Quality** | Run linters and formatters | [ESLint](https://eslint.org/), [Prettier](https://prettier.io/), [Black](https://black.readthedocs.io/) |
+| **Security Scanning** | Detect vulnerabilities | [CodeQL](https://codeql.github.com/), [Snyk](https://snyk.io/), [Dependabot](https://github.com/dependabot) |
+| **Scheduled Tasks** | Run periodic jobs | Database backups, reports, cleanup scripts |
 
 ## How It Works
 
-GitHub Actions uses YAML files called workflow files that define your automation. These files are stored in the `.github/workflows` directory of your repository. Each workflow file contains:
+[GitHub Actions](https://github.com/features/actions) uses [YAML](https://yaml.org/) files called **workflow files** that define your automation. These files are stored in the `.github/workflows` directory of your repository.
 
-- **Events** that trigger the workflow
-- **Jobs** that define what to do when the event occurs
-- **Steps** that run commands or actions
-- **Runners** that execute the workflow
+### GitHub Actions Architecture
 
-In the following sections, we'll guide you through setting up your first GitHub Actions workflow, from initial setup to advanced configurations.
+```
+┌──────────────────────────────────────────────────┐
+│               WORKFLOW FILE (.yml)                  │
+└─────────────────────┬────────────────────────────┘
+                       │
+                       │
+        ┌──────────────┴──────────────┐
+        │         EVENTS              │
+        │  (push, pull_request, etc)  │
+        └──────────────┬──────────────┘
+                       │
+                       │ Triggers
+                       │
+        ┌──────────────┴──────────────┐
+        │          JOBS               │
+        │   (build, test, deploy)     │
+        └──────────────┬──────────────┘
+                       │
+                       │ Contains
+                       │
+        ┌──────────────┴──────────────┐
+        │         STEPS              │
+        │  (checkout, install, run)   │
+        └──────────────┬──────────────┘
+                       │
+                       │ Executed by
+                       │
+        ┌──────────────┴──────────────┐
+        │        RUNNERS             │
+        │  (Ubuntu, Windows, macOS)   │
+        └────────────────────────────┘
+```
 
-> **Note**: This guide assumes basic familiarity with Git and GitHub. If you're new to these tools, consider reviewing [GitHub's Getting Started guide](https://docs.github.com/en/get-started) first.
+*Figure 2: GitHub Actions architecture showing the hierarchy of components.*
+
+### Workflow Components
+
+| Component | Description | Example |
+|-----------|-------------|----------|
+| **[Events](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)** | Triggers that start the workflow | `push`, `pull_request`, `schedule` |
+| **[Jobs](https://docs.github.com/en/actions/using-jobs)** | Groups of steps that execute together | `build`, `test`, `deploy` |
+| **[Steps](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsteps)** | Individual tasks within a job | Checkout code, run tests, deploy |
+| **[Runners](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners)** | Virtual machines that execute workflows | `ubuntu-latest`, `windows-latest`, `macos-latest` |
+
+In the following sections, we'll guide you through setting up your first [GitHub Actions](https://github.com/features/actions) workflow, from initial setup to advanced configurations.
+
+> **Note**: This guide assumes basic familiarity with [Git](https://git-scm.com/) and [GitHub](https://github.com). If you're new to these tools, consider reviewing [GitHub's Getting Started guide](https://docs.github.com/en/get-started) first.

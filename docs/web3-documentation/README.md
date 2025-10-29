@@ -11,7 +11,6 @@ I chose this because it is a foundational Web3 tool with real-world utility, and
 | File            | Description |
 |-----------------|-------------|
 | user-guide.md   | Comprehensive end-user guide for Uniswap, covering onboarding, key concepts, smart contract references, and practical examples based on the Web3 Documentation Framework. |
-| reflection.txt  | Notes on what I have learnt during this project. |
 
 ## What I Learned
 Through this project, I deepened my understanding of Web3 ecosystems, particularly DeFi protocols like Uniswap. I learned how to structure technical documentation in layers (from foundational to practical) to explain each concept to different user needs, and the importance of balancing simplicity for end-users with technical depth for developers.

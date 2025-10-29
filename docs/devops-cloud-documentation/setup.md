@@ -2,14 +2,18 @@
 
 ## Prerequisites
 
-Before we begin, ensure you have the following:
+Before getting started with [GitHub Actions](https://github.com/features/actions), ensure you have:
 
-- A [GitHub account](https://github.com/signup)
-- Basic knowledge of Git commands and GitHub workflow
-- A code project in a GitHub repository or create a new one for testing
-- (Optional) [Git](https://git-scm.com/downloads) installed locally if you plan to test the workflow
+| Requirement | Description | Resource |
+|-------------|-------------|----------|
+| **GitHub Account** | Free account to create repositories | [Sign up](https://github.com/signup) |
+| **Git Knowledge** | Basic Git commands and workflow | [Git Basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) |
+| **Code Project** | Existing project or new repository | [GitHub Repos](https://docs.github.com/en/repositories) |
+| **Git Installation** | (Optional) Local testing | [Download Git](https://git-scm.com/downloads) |
 
-## Step 1: Create a New Repository
+## Step 1: Create New Repository
+
+Follow these steps to create a new [GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories) for your project:
 
 - Sign in to your GitHub account
 - Create a new repository:
@@ -37,8 +41,10 @@ repository-name/
 GitHub Actions is enabled by default for all repositories. To verify:
 
 - Navigate to your repository on GitHub
-- Click on the "Actions" tab
-- If prompted, click "Set up a workflow yourself" or "Configure" to get started
+- Click on the **Actions** tab
+- If prompted, click **Set up a workflow yourself** or **Configure** to get started
+
+> **Note:** If you don't see the Actions tab, check your repository settings to ensure Actions are enabled.
 
 ## Step 3: Create Your First Workflow File
 

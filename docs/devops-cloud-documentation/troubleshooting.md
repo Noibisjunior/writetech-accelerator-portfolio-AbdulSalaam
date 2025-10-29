@@ -1,10 +1,33 @@
 # Troubleshooting GitHub Actions
 
-This guide addresses common issues you might encounter when working with GitHub Actions and provides solutions to resolve them.
+This guide addresses common issues you might encounter when working with [GitHub Actions](https://github.com/features/actions) and provides practical solutions to resolve them quickly.
+
+## Debugging Workflow
+
+```
+    Workflow Failing?
+          │
+          │
+          ↓
+    Check Workflow Logs
+          │
+          │
+     ┌────┴────┐
+     │         │
+     │         │
+  Syntax?   Permission?
+     │         │
+     ↓         ↓
+  Fix YAML  Update Secrets
+```
+
+*Figure 1: Basic troubleshooting flowchart for failed workflows.*
 
 ## Common Issues and Solutions
 
 ### 1. Workflow Not Triggering
+
+**Symptom:** Your workflow doesn't run when you push changes or create a pull request.
 
 **Issue**: Your workflow isn't running when you push changes or create a pull request.
 

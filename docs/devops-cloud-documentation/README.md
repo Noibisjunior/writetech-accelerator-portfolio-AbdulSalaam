@@ -1,6 +1,25 @@
-# GitHub Actions CI/CD Documentation
+# Module 5: DevOps & Cloud Documentation
 
-Welcome to the comprehensive guide on setting up Continuous Integration and Continuous Deployment (CI/CD) using GitHub Actions. This documentation is designed to help developers of all skill levels implement robust automation workflows for their projects.
+**Platform:** [GitHub Actions](https://github.com/features/actions) | **Documentation:** [GitHub Actions Docs](https://docs.github.com/en/actions) | **Marketplace:** [Actions Marketplace](https://github.com/marketplace?type=actions)
+
+## Overview
+
+Welcome to the comprehensive guide on setting up Continuous Integration and Continuous Deployment (CI/CD) using [GitHub Actions](https://github.com/features/actions). This documentation is designed to help developers of all skill levels implement robust automation workflows for their projects.
+
+### What is CI/CD?
+
+```
+  Code Push          Build & Test         Deploy
+      ↓                   ↓                  ↓
+  ┌────────┐        ┌──────────┐      ┌──────────┐
+  │ GitHub │   →    │  GitHub  │  →   │  Cloud   │
+  │  Repo  │        │  Actions │      │ Platform │
+  └────────┘        └──────────┘      └──────────┘
+      ↓                   ↓                  ↓
+   Trigger          Automate Test      Auto Deploy
+```
+
+*Figure 1: High-level CI/CD workflow showing the automation pipeline from code push to deployment.*
 
 ## Documentation Structure
 
@@ -64,17 +83,32 @@ jobs:
 
 ## Prerequisites
 
-- A GitHub account
-- Basic familiarity with Git and GitHub
-- A code project in a GitHub repository
+Before getting started, ensure you have:
+
+| Requirement | Description | Get Started |
+|-------------|-------------|-------------|
+| **GitHub Account** | Free account to host repositories | [Sign up](https://github.com/signup) |
+| **Git Basics** | Familiarity with version control | [Learn Git](https://git-scm.com/doc) |
+| **Code Project** | Repository with code to automate | [Create repo](https://github.com/new) |
+| **YAML Knowledge** | Basic understanding of YAML syntax | [YAML Tutorial](https://yaml.org/spec/1.2.2/) |
 
 ## How to Use This Documentation
-
 1. If you're new to CI/CD, start with the [Overview](overview.md)
 2. Follow the [Setup Guide](setup.md) to create your first workflow
 3. Use the [Step-by-Step Guide](step_by_step.md) to build a complete pipeline
 4. Refer to the [Troubleshooting](troubleshooting.md) section if you encounter issues
 5. Check the [Summary](summary.md) for additional resources
+
+### For Beginners
+1. Start with [Overview](overview.md) to understand CI/CD concepts
+2. Follow [Setup Guide](setup.md) to create your first workflow
+3. Build a complete pipeline with [Step-by-Step Guide](step_by_step.md)
+
+### For Experienced Users
+1. Jump to [Step-by-Step Guide](step_by_step.md) for advanced features
+2. Check [Troubleshooting](troubleshooting.md) for common issues
+3. Review [Summary](summary.md) for optimization tips
+
 
 ## Contributing
 
