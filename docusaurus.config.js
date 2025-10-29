@@ -10,9 +10,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: `Abdulsalaam's Technical-Writing Portfolio`,
-  tagline: 'A collection of my technical writing projects, articles, and documentation samples, showcasing my skills in clear and effective communication, tailored for developers and technical audiences.',
-  favicon: 'img/favicon.ico',
+  title: 'Abdulsalaam - Technical Writer',
+  tagline: 'Technical Writing Portfolio | API Documentation · Developer Guides · AI Documentation · Docs-Automation . DevOps Documentation . Web3 Documentation',
+  favicon: 'img/profile-image.jfif',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -102,9 +102,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Abdulsalaam',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Abdulsalaam Technical Writer Logo',
           src: 'img/logo.svg',
         },
         items: [

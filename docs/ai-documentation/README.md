@@ -1,9 +1,22 @@
-# AI for Documentation – Mistral-7B-Instruct-v0.3 Model
+# Module 4: AI for Documentation
+
+**Model:** [Mistral-7B-Instruct-v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) | **Developer:** [Mistral AI](https://mistral.ai/) | **Documentation:** [Hugging Face Model Hub](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3)
+
+## Project Overview
 
 This project explores how AI tools can support technical documentation by generating comprehensive drafts, extracting key insights from existing model information, and creating polished documentation assets that serve both developers and stakeholders.
 
-## Model Chosen
-[Mistral-7B-Instruct-v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) - A 7 billion parameter instruction-tuned language model by Mistral AI with advanced function calling capabilities and extended vocabulary.
+### Model Chosen: Mistral-7B-Instruct-v0.3
+
+[Mistral-7B-Instruct-v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) is a state-of-the-art 7 billion parameter instruction-tuned language model developed by [Mistral AI](https://mistral.ai/). This model offers:
+
+| Feature | Specification | Benefit |
+|---------|--------------|----------|
+| **Parameters** | 7 billion | Efficient yet powerful |
+| **Vocabulary** | 32,768 tokens (v3 tokenizer) | Better text representation |
+| **Function Calling** | Native support | Tool integration capabilities |
+| **License** | [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) | Commercial-friendly |
+| **Performance** | Outperforms Llama 2 13B | Superior efficiency |
 
 ## Project Files
 
@@ -31,7 +44,7 @@ This project explores how AI tools can support technical documentation by genera
 - The critical value of manual editing for safety considerations, visual organization, and actionable guidance
 - That combining AI generation with human expertise creates much stronger documentation than either approach alone
 
-## 💡 Key Insights
+## Key Insights
 Working on this project really opened my eyes to both the potential and limitations of AI-assisted technical writing. While the AI generated incredibly thorough content covering all the technical aspects I needed, it took significant human intervention to make it actually useful for developers trying to implement the model in real applications.
 
 The most valuable part was learning how to structure prompts effectively and then knowing what to enhance in the output, things like adding proper error handling in code examples, creating visual hierarchy with tables and callouts, and making safety warnings prominent rather than writing generic paragraphs.
