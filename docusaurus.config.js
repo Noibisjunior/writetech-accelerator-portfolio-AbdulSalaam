@@ -100,7 +100,7 @@ const config = {
         title: 'Abdulsalaam',
         logo: {
           alt: 'Abdulsalaam Technical Writer Logo',
-          src: 'img/logo.svg',
+          src: 'img/profile-image.jfif',
         },
         items: [
           {
